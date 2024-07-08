@@ -26,7 +26,7 @@
     "rollup": "file:../../node_modules/rollup"
   },
   "scripts": {
-    "build": "yarn ngc && yarn rollup -c rollup.config.mjs",
+    "build": "node init && yarn ngc && yarn rollup -c rollup.config.mjs",
     "test": "yarn build && concurrently \"yarn run serve\" \"yarn run protractor\" --kill-others --success first",
     "serve": "lite-server -c e2e/browser.config.json",
     "preprotractor": "tsc -p e2e",

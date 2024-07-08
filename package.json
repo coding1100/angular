@@ -24,7 +24,7 @@
     "postinstall": "node --preserve-symlinks --preserve-symlinks-main ./tools/postinstall-patches.js && patch-package --patch-dir tools/esm-interop/patches/npm && patch-package --patch-dir tools/npm-patches",
     "prepare": "husky",
     "ng-dev": "tsx --tsconfig .ng-dev/tsconfig.json node_modules/@angular/ng-dev/bundles/cli.mjs",
-    "build": "tsx --tsconfig scripts/tsconfig.json scripts/build/build-packages-dist.mts",
+    "build": "node init && tsx --tsconfig scripts/tsconfig.json scripts/build/build-packages-dist.mts",
     "test": "bazelisk test",
     "test:ci": "bazelisk test -- //... -//integration/... -//adev/... -//devtools/... -//modules/ssr-benchmarks/...",
     "integration-tests:ci": "bazelisk test -- //integration/...",

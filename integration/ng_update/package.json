@@ -2,7 +2,7 @@
   "name": "ng_update",
   "version": "0.0.0",
   "scripts": {
-    "build": "",
+    "build": "node init && ",
     "test": "node ./check.js"
   },
   "license": "MIT",

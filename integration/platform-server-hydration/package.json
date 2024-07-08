@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --configuration production",
+    "start": "node init && ng serve",
+    "build": "node init && ng build --configuration production",
     "postinstall": "node ./copy-event-dispatch-contract.mjs",
     "pretest": "ng version",
     "test": "yarn e2e",
